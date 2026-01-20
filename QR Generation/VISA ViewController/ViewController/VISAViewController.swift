@@ -86,11 +86,24 @@ class VISAViewController: UIViewController {
         return label
     }()
     
-    private let buttonStackView: UIStackView = {
-        let stackView = UIStackView()
+    private lazy var buttonStackView: UIStackView = {
+        let scanButton = makeIconButton(
+            title: "Save",
+            systemImage: "square.and.arrow.down",
+            action: #selector(didTapSave)
+        )
+
+        let generateButton = makeIconButton(
+            title: "Share",
+            systemImage: "square.and.arrow.up",
+            action: #selector(didTapShare)
+        )
+
+        let stackView = UIStackView(arrangedSubviews: [scanButton, generateButton])
         stackView.axis = .horizontal
-        stackView.spacing = 8
-        stackView.distribution = .equalSpacing
+        stackView.spacing = 12
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
 
@@ -104,6 +117,14 @@ class VISAViewController: UIViewController {
         navigationItem.title = "My VISA QR"
     }
     
+    @objc private func didTapSave() {
+        print("Save tapped")
+    }
+
+    @objc private func didTapShare() {
+        print("Share tapped")
+    }
+    
     private func setupView() {
         view.addSubview(qrContainerView)
         qrContainerView.addSubview(pinkStripView)
@@ -113,40 +134,71 @@ class VISAViewController: UIViewController {
         visaQRContainerView.addSubview(visaQRImageView)
         qrContainerView.addSubview(userNameLabel)
         qrContainerView.addSubview(accountNumberLabel)
-        
+        qrContainerView.addSubview(buttonStackView)
         
         NSLayoutConstraint.activate([
             qrContainerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             qrContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
             qrContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
-            qrContainerView.heightAnchor.constraint(equalToConstant: CGRectGetHeight(UIScreen.main.bounds) * 0.7),
-            
+            qrContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -170),
+
             pinkStripView.topAnchor.constraint(equalTo: qrContainerView.topAnchor),
-            pinkStripView.widthAnchor.constraint(equalTo: qrContainerView.widthAnchor),
+            pinkStripView.leadingAnchor.constraint(equalTo: qrContainerView.leadingAnchor),
+            pinkStripView.trailingAnchor.constraint(equalTo: qrContainerView.trailingAnchor),
             pinkStripView.heightAnchor.constraint(equalToConstant: 32),
-            
+
             visaLogoImageView.topAnchor.constraint(equalTo: pinkStripView.bottomAnchor, constant: 16),
             visaLogoImageView.centerXAnchor.constraint(equalTo: qrContainerView.centerXAnchor),
             visaLogoImageView.widthAnchor.constraint(equalToConstant: 80),
             visaLogoImageView.heightAnchor.constraint(equalToConstant: 50),
-            
-            visaDescriptionLabel.topAnchor.constraint(equalTo: visaLogoImageView.bottomAnchor),
-            visaDescriptionLabel.centerXAnchor.constraint(equalTo: visaLogoImageView.centerXAnchor),
-            
+
+            visaDescriptionLabel.topAnchor.constraint(equalTo: visaLogoImageView.bottomAnchor, constant: 4),
+            visaDescriptionLabel.centerXAnchor.constraint(equalTo: qrContainerView.centerXAnchor),
+
             visaQRContainerView.topAnchor.constraint(equalTo: visaDescriptionLabel.bottomAnchor, constant: 12),
             visaQRContainerView.leadingAnchor.constraint(equalTo: qrContainerView.leadingAnchor, constant: 28),
             visaQRContainerView.trailingAnchor.constraint(equalTo: qrContainerView.trailingAnchor, constant: -28),
-            visaQRContainerView.heightAnchor.constraint(equalToConstant: CGRectGetHeight(UIScreen.main.bounds) * 0.35),
-            
+            visaQRContainerView.heightAnchor.constraint(equalTo: qrContainerView.heightAnchor, multiplier: 0.5),
+
+            visaQRImageView.topAnchor.constraint(equalTo: visaQRContainerView.topAnchor, constant: 12),
+            visaQRImageView.bottomAnchor.constraint(equalTo: visaQRContainerView.bottomAnchor, constant: -12),
+            visaQRImageView.leadingAnchor.constraint(equalTo: visaQRContainerView.leadingAnchor, constant: 12),
+            visaQRImageView.trailingAnchor.constraint(equalTo: visaQRContainerView.trailingAnchor, constant: -12),
+
             userNameLabel.topAnchor.constraint(equalTo: visaQRContainerView.bottomAnchor, constant: 18),
-            userNameLabel.centerXAnchor.constraint(equalTo: visaQRContainerView.centerXAnchor),
-            
+            userNameLabel.centerXAnchor.constraint(equalTo: qrContainerView.centerXAnchor),
+
             accountNumberLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 4),
-            accountNumberLabel.centerXAnchor.constraint(equalTo: visaQRContainerView.centerXAnchor),
+            accountNumberLabel.centerXAnchor.constraint(equalTo: qrContainerView.centerXAnchor),
+
+            buttonStackView.leadingAnchor.constraint(equalTo: qrContainerView.leadingAnchor, constant: 28),
+            buttonStackView.trailingAnchor.constraint(equalTo: qrContainerView.trailingAnchor, constant: -28),
+            buttonStackView.bottomAnchor.constraint(equalTo: qrContainerView.bottomAnchor, constant: -16),
+            buttonStackView.heightAnchor.constraint(equalToConstant: 52),
         ])
+
     }
 }
 
 extension VISAViewController {
+    
+    private func makeIconButton( title: String, systemImage: String, action: Selector) -> UIButton {
+        
+        if #available(iOS 15.0, *) {
+            var config = UIButton.Configuration.filled()
+            config.title = title
+            config.image = UIImage(systemName: systemImage)
+            config.imagePlacement = .leading
+            config.imagePadding = 8
+            config.cornerStyle = .medium
+            
+            let button = UIButton(configuration: config)
+            button.addTarget(self, action: action, for: .touchUpInside)
+            
+            return button
+            
+        }
+        return UIButton()
+    }
     
 }

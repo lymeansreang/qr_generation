@@ -94,7 +94,7 @@ final class ViewController: UIViewController {
 
         switch model.action {
         case .scanQR:
-            let scanVC = ScanQRViewController()
+            let scanVC = ScanKHQRViewController()
             if let nav = navigationController {
                 nav.pushViewController(scanVC, animated: true)
             } else {
