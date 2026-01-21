@@ -15,6 +15,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        if let window = window {
+            let banner = EnvBanner()
+            banner.translatesAutoresizingMaskIntoConstraints = false
+            window.addSubview(banner)
+
+            banner.configure(for: AppEnv.current)
+
+            NSLayoutConstraint.activate([
+                banner.topAnchor.constraint(equalTo: window.safeAreaLayoutGuide.topAnchor, constant: 8),
+                banner.trailingAnchor.constraint(equalTo: window.safeAreaLayoutGuide.trailingAnchor, constant: -12),
+                banner.heightAnchor.constraint(equalToConstant: 28)
+            ])
+        }
+        
         let window = UIWindow(windowScene: windowScene)
         let viewController = ViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
@@ -22,6 +36,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
+    
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

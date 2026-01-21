@@ -1,0 +1,11 @@
+//
+//  UAT.xcconfig
+//  QR Generation
+//
+//  Created by AEON_Sreang on 21/1/26.
+//
+
+APP_ENV = uat
+API_BASE_URL = https://uat-api.yourdomain.com
+PRODUCT_BUNDLE_IDENTIFIER = kh.com.aeon.base_project.uat
+APP_DISPLAY_NAME = QR Uat

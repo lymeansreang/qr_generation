@@ -195,13 +195,13 @@ extension ViewController {
         // Title + Promo
         let titleLabel = UILabel()
         titleLabel.text = model.title
-        titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        titleLabel.font = .systemFont(ofSize: 18, weight: .bold)
         titleLabel.textColor = .label
 
         let promoLabel = PaddingLabel()
-        promoLabel.contentInsets = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10)
+        promoLabel.contentInsets = UIEdgeInsets(top: 4, left: 6, bottom: 4, right: 6)
         promoLabel.text = model.promo ?? ""
-        promoLabel.font = .systemFont(ofSize: 12, weight: .bold)
+        promoLabel.font = .systemFont(ofSize: 11, weight: .bold)
         promoLabel.textColor = .white
         promoLabel.backgroundColor = .systemPink
         promoLabel.textAlignment = .center
@@ -219,7 +219,7 @@ extension ViewController {
         // Subtitle
         let subtitleLabel = UILabel()
         subtitleLabel.text = model.subtitle
-        subtitleLabel.font = .systemFont(ofSize: 15, weight: .semibold)
+        subtitleLabel.font = .systemFont(ofSize: 13, weight: .semibold)
         subtitleLabel.textColor = .secondaryLabel
         subtitleLabel.numberOfLines = 1
 

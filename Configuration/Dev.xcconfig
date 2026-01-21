@@ -1,0 +1,12 @@
+//
+//  Dev.xcconfig
+//  QR Generation
+//
+//  Created by AEON_Sreang on 21/1/26.
+//
+
+APP_ENV = dev
+API_BASE_URL = https://dev-api.yourdomain.com
+PRODUCT_BUNDLE_IDENTIFIER = kh.com.aeon.base_project.dev
+APP_DISPLAY_NAME = QR Dev
+
