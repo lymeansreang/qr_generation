@@ -9,7 +9,6 @@ import Foundation
 import CoreImage
 import UIKit
 
-// MARK: - QR Generator
 enum QRCodeGenerator {
     static func makeQR(from text: String, scale: CGFloat = 10) -> UIImage? {
         let data = Data(text.utf8)
