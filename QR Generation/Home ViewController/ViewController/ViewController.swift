@@ -116,7 +116,7 @@ final class ViewController: UIViewController {
             }
             
         case .visaQR:
-            let visaVC = VISAViewController()
+            let visaVC = ListMerchantViewController()
             if let nav = navigationController {
                 nav.pushViewController(visaVC, animated: true)
             } else {

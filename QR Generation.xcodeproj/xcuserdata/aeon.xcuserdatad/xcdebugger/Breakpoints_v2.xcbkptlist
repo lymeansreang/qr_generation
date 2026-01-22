@@ -14,86 +14,10 @@
             filePath = "QR Generation/VISA ViewController/ViewController/VISAViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "generateAndRenderQR()"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "amountChanged(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "402113DE-5832-4BA1-9ED1-D61895E3DC0E - e839de39321c6ffb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QR_Generation_Uat.VISAViewController.setupView() -&gt; ()"
-                  moduleName = "QR Generation Uat.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aeon/Documents/This%20pc/QR%20Generation/QR%20Generation/VISA%20ViewController/ViewController/VISAViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171">
-               </Location>
-               <Location
-                  uuid = "402113DE-5832-4BA1-9ED1-D61895E3DC0E - 34a382cf3ad7f07f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QR__Dev.VISAViewController.generateAndRenderQR() -&gt; ()"
-                  moduleName = "QR  Dev.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aeon/Documents/This%20pc/QR%20Generation/QR%20Generation/VISA%20ViewController/ViewController/VISAViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8FD6ECE4-989C-4BDF-839E-ED1C5E956D00"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QR Generation/VISA ViewController/ViewController/VISAViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "generateAndRenderQR()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8FD6ECE4-989C-4BDF-839E-ED1C5E956D00 - 34a382cf3ad7f154"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QR__Dev.VISAViewController.generateAndRenderQR() -&gt; ()"
-                  moduleName = "QR  Dev.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aeon/Documents/This%20pc/QR%20Generation/QR%20Generation/VISA%20ViewController/ViewController/VISAViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179">
-               </Location>
-               <Location
-                  uuid = "8FD6ECE4-989C-4BDF-839E-ED1C5E956D00 - e839de39321c6e12"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QR_Generation_Uat.VISAViewController.setupView() -&gt; ()"
-                  moduleName = "QR Generation Uat.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aeon/Documents/This%20pc/QR%20Generation/QR%20Generation/VISA%20ViewController/ViewController/VISAViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "180"
-                  endingLineNumber = "180">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

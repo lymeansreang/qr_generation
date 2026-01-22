@@ -22,6 +22,9 @@
 		3EADD1362F20693D005D8ECF /* PROD.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EADD1352F20692D005D8ECF /* PROD.xcconfig */; };
 		3EADD1382F206C06005D8ECF /* EnvBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD1372F206C06005D8ECF /* EnvBanner.swift */; };
 		3EADD13B2F20D9A1005D8ECF /* QRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13A2F20D9A1005D8ECF /* QRModel.swift */; };
+		3EADD13D2F21CA4B005D8ECF /* ListMerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13C2F21CA4B005D8ECF /* ListMerchantViewController.swift */; };
+		3EADD1402F21CDBE005D8ECF /* MerchantListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13F2F21CDBE005D8ECF /* MerchantListingTableViewCell.swift */; };
+		3EADD1422F21D5DB005D8ECF /* MerchantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD1412F21D56C005D8ECF /* MerchantModel.swift */; };
 		FC0824112F2122D400684AE0 /* CopyQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0824102F2122D400684AE0 /* CopyQRView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		3EADD1352F20692D005D8ECF /* PROD.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PROD.xcconfig; sourceTree = "<group>"; };
 		3EADD1372F206C06005D8ECF /* EnvBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvBanner.swift; sourceTree = "<group>"; };
 		3EADD13A2F20D9A1005D8ECF /* QRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRModel.swift; sourceTree = "<group>"; };
+		3EADD13C2F21CA4B005D8ECF /* ListMerchantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMerchantViewController.swift; sourceTree = "<group>"; };
+		3EADD13F2F21CDBE005D8ECF /* MerchantListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantListingTableViewCell.swift; sourceTree = "<group>"; };
+		3EADD1412F21D56C005D8ECF /* MerchantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantModel.swift; sourceTree = "<group>"; };
 		FC0824102F2122D400684AE0 /* CopyQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyQRView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +149,7 @@
 		3E2BBFC42F1F85BB000F8419 /* VISA ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3EADD13E2F21CB38005D8ECF /* View */,
 				3EADD1392F20D989005D8ECF /* Model */,
 				3E2BBFC52F1F85C7000F8419 /* ViewController */,
 			);
@@ -153,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				3E2BBFC62F1F85DD000F8419 /* VISAViewController.swift */,
-				FC0824102F2122D400684AE0 /* CopyQRView.swift */,
+				3EADD13C2F21CA4B005D8ECF /* ListMerchantViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -172,9 +179,19 @@
 		3EADD1392F20D989005D8ECF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3EADD1412F21D56C005D8ECF /* MerchantModel.swift */,
 				3EADD13A2F20D9A1005D8ECF /* QRModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3EADD13E2F21CB38005D8ECF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC0824102F2122D400684AE0 /* CopyQRView.swift */,
+				3EADD13F2F21CDBE005D8ECF /* MerchantListingTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +279,10 @@
 				3E2BBFB82F1F6ACB000F8419 /* SceneDelegate.swift in Sources */,
 				3E2BBFC72F1F85DD000F8419 /* VISAViewController.swift in Sources */,
 				3EADD13B2F20D9A1005D8ECF /* QRModel.swift in Sources */,
+				3EADD1402F21CDBE005D8ECF /* MerchantListingTableViewCell.swift in Sources */,
 				3E2BBFBC2F1F6AF7000F8419 /* model.swift in Sources */,
+				3EADD1422F21D5DB005D8ECF /* MerchantModel.swift in Sources */,
+				3EADD13D2F21CA4B005D8ECF /* ListMerchantViewController.swift in Sources */,
 				3E2BBFBF2F1F79BE000F8419 /* ScanQRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

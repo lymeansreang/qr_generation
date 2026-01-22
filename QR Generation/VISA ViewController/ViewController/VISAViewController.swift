@@ -104,6 +104,15 @@ final class VISAViewController: UIViewController {
         return label
     }()
     
+    private let amountTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "0"
+        tf.keyboardType = .decimalPad
+        tf.textAlignment = .left
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
+    
     private lazy var buttonStackView: UIStackView = {
         let copyButton = makeIconButton(
             title: "Copy",
@@ -117,21 +126,20 @@ final class VISAViewController: UIViewController {
             action: #selector(didTapSave)
         )
         
-        //        let shareButton = makeIconButton(
-        //            title: "Share",
-        //            systemImage: "share",
-        //            action: #selector(didTapShare)
-        //        )
-        
         let stackView = UIStackView(arrangedSubviews: [copyButton, saveButton])
         stackView.axis = .horizontal
+        stackView.backgroundColor = .clear
         stackView.spacing = 12
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
+    // Values passed from list
     var userName: String?
+    var merchantId: String?
+    var merchantCity: String?
+    var merchantCurrencyNumeric: String? // "116" for ៛, else $
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -139,8 +147,19 @@ final class VISAViewController: UIViewController {
         view.backgroundColor = .white
         setupView()
         
+        // Apply passed-in values to labels
+        if let userName {
+            userNameLabel.text = userName
+        }
+        if let merchantId {
+            accountNumberLabel.text = "ID: \(merchantId)"
+        }
+        
         // Build payload + generate QR immediately
         generateAndRenderQR()
+        
+        // Update QR as user types amount
+        amountTextField.addTarget(self, action: #selector(amountChanged(_:)), for: .editingChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -148,10 +167,19 @@ final class VISAViewController: UIViewController {
         navigationItem.title = "My VISA QR"
     }
     
+    @objc private func amountChanged(_ sender: UITextField) {
+        generateAndRenderQR()
+    }
+    
     @objc private func didTapCopy() {
         let copyView = CopyQRView(frame: CGRect(x: 0, y: 0, width: 235, height: 350))
         copyView.userName = userName ?? userNameLabel.text
         copyView.qrImage = visaQRImageView.image
+        
+        // Provide amount and currency for the composed image
+        let normalized = normalizedAmountString(amountTextField.text ?? "")
+        copyView.amountString = normalized
+        copyView.currencyNumeric = merchantCurrencyNumeric ?? "116"
         
         copyView.setNeedsLayout()
         copyView.layoutIfNeeded()
@@ -162,10 +190,14 @@ final class VISAViewController: UIViewController {
     }
     
     @objc private func didTapShare() {
-        // Compose a shareable image using CopyQRView template
         let copyView = CopyQRView(frame: CGRect(x: 0, y: 0, width: 235, height: 350))
         copyView.userName = userName ?? userNameLabel.text
         copyView.qrImage = visaQRImageView.image
+        
+        let normalized = normalizedAmountString(amountTextField.text ?? "")
+        copyView.amountString = normalized
+        copyView.currencyNumeric = merchantCurrencyNumeric ?? "116"
+        
         copyView.setNeedsLayout()
         copyView.layoutIfNeeded()
         let composedImage = copyView.asImage()
@@ -180,15 +212,18 @@ final class VISAViewController: UIViewController {
     }
     
     @objc private func didTapSave() {
-        // Compose a savable image using CopyQRView template
         let copyView = CopyQRView(frame: CGRect(x: 0, y: 0, width: 235, height: 350))
         copyView.userName = userName ?? userNameLabel.text
         copyView.qrImage = visaQRImageView.image
+        
+        let normalized = normalizedAmountString(amountTextField.text ?? "")
+        copyView.amountString = normalized
+        copyView.currencyNumeric = merchantCurrencyNumeric ?? "116"
+        
         copyView.setNeedsLayout()
         copyView.layoutIfNeeded()
         let composedImage = copyView.asImage()
         
-        // Request permission and save
         requestPhotoAccessAndSave(composedImage)
     }
     
@@ -238,28 +273,56 @@ final class VISAViewController: UIViewController {
     }
     
     private func generateAndRenderQR() {
+        // Normalize amount from user input
+        let rawAmount = amountTextField.text ?? ""
+        let normalizedAmount = normalizedAmountString(rawAmount)
+        
+        // Use passed values where available
+        let name = userName ?? userNameLabel.text ?? "Merchant"
+        let city = merchantCity ?? "Phnom Penh"
+        let ccyNumeric = merchantCurrencyNumeric ?? "116"
+        
         // Starter EMV-like payload (minimal template).
-        // Later you can add real Visa Merchant Account Info (tag 26 etc).
         let payload = EMVQR.buildMerchantPresented(
-            merchantName: "Tazorng Cafe",
-            merchantCity: "Phnom Penh",
+            merchantName: name,
+            merchantCity: city,
             countryCode: "KH",
-            currencyNumeric: "116",
-            amount: "10.00",
+            currencyNumeric: ccyNumeric,
+            amount: normalizedAmount.isEmpty ? nil : normalizedAmount,
             isDynamic: true
         )
         
         currentPayload = payload
-        
         visaQRImageView.image = QRCodeGenerator.makeQR(from: payload, scale: 10)
     }
     
+    // Ensure amount is formatted to 2 decimal places and only valid characters
+    private func normalizedAmountString(_ s: String) -> String {
+        let allowed = CharacterSet(charactersIn: "0123456789.,")
+        let filtered = String(s.unicodeScalars.filter { allowed.contains($0) })
+            .replacingOccurrences(of: ",", with: ".")
+        
+        guard !filtered.isEmpty, filtered != "." else { return "" }
+        
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        
+        if let decimal = Decimal(string: filtered, locale: Locale(identifier: "en_US_POSIX")) {
+            return formatter.string(from: decimal as NSDecimalNumber) ?? ""
+        } else {
+            return ""
+        }
+    }
     
     private func setupView() {
         view.addSubview(qrContainerView)
         qrContainerView.addSubview(pinkStripView)
         qrContainerView.addSubview(visaLogoImageView)
         qrContainerView.addSubview(visaDescriptionLabel)
+        qrContainerView.addSubview(amountTextField)
         qrContainerView.addSubview(visaQRContainerView)
         visaQRContainerView.addSubview(visaQRImageView)
         visaQRImageView.addSubview(bakongIconView)
@@ -271,7 +334,7 @@ final class VISAViewController: UIViewController {
             qrContainerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             qrContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
             qrContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
-            qrContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -150),
+            qrContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
             
             pinkStripView.topAnchor.constraint(equalTo: qrContainerView.topAnchor),
             pinkStripView.leadingAnchor.constraint(equalTo: qrContainerView.leadingAnchor),
@@ -286,13 +349,18 @@ final class VISAViewController: UIViewController {
             visaDescriptionLabel.topAnchor.constraint(equalTo: visaLogoImageView.bottomAnchor, constant: 4),
             visaDescriptionLabel.centerXAnchor.constraint(equalTo: qrContainerView.centerXAnchor),
             
-            visaQRContainerView.topAnchor.constraint(equalTo: visaDescriptionLabel.bottomAnchor, constant: 12),
+            amountTextField.topAnchor.constraint(equalTo: visaDescriptionLabel.bottomAnchor, constant: 8),
+            amountTextField.leadingAnchor.constraint(equalTo: qrContainerView.leadingAnchor, constant: 28),
+            amountTextField.trailingAnchor.constraint(equalTo: qrContainerView.trailingAnchor, constant: -28),
+            amountTextField.heightAnchor.constraint(equalToConstant: 40),
+            
+            visaQRContainerView.topAnchor.constraint(equalTo: amountTextField.bottomAnchor, constant: 8),
             visaQRContainerView.leadingAnchor.constraint(equalTo: qrContainerView.leadingAnchor, constant: 28),
             visaQRContainerView.trailingAnchor.constraint(equalTo: qrContainerView.trailingAnchor, constant: -28),
             visaQRContainerView.heightAnchor.constraint(equalTo: qrContainerView.heightAnchor, multiplier: 0.5),
             
-            visaQRImageView.topAnchor.constraint(equalTo: visaQRContainerView.topAnchor, constant: 12),
-            visaQRImageView.bottomAnchor.constraint(equalTo: visaQRContainerView.bottomAnchor, constant: -12),
+            visaQRImageView.topAnchor.constraint(equalTo: visaQRContainerView.topAnchor, constant: 8),
+            visaQRImageView.bottomAnchor.constraint(equalTo: visaQRContainerView.bottomAnchor, constant: -8),
             visaQRImageView.leadingAnchor.constraint(equalTo: visaQRContainerView.leadingAnchor, constant: 12),
             visaQRImageView.trailingAnchor.constraint(equalTo: visaQRContainerView.trailingAnchor, constant: -12),
             
@@ -301,16 +369,17 @@ final class VISAViewController: UIViewController {
             bakongIconView.widthAnchor.constraint(equalToConstant: 32),
             bakongIconView.heightAnchor.constraint(equalToConstant: 32),
             
-            userNameLabel.topAnchor.constraint(equalTo: visaQRContainerView.bottomAnchor, constant: 18),
+            userNameLabel.topAnchor.constraint(equalTo: visaQRContainerView.bottomAnchor, constant: 8),
             userNameLabel.centerXAnchor.constraint(equalTo: qrContainerView.centerXAnchor),
             
             accountNumberLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 4),
             accountNumberLabel.centerXAnchor.constraint(equalTo: qrContainerView.centerXAnchor),
             
+            buttonStackView.topAnchor.constraint(equalTo: accountNumberLabel.bottomAnchor, constant: 16),
             buttonStackView.leadingAnchor.constraint(equalTo: qrContainerView.leadingAnchor, constant: 28),
             buttonStackView.trailingAnchor.constraint(equalTo: qrContainerView.trailingAnchor, constant: -28),
-            buttonStackView.bottomAnchor.constraint(equalTo: qrContainerView.bottomAnchor, constant: -16),
             buttonStackView.heightAnchor.constraint(equalToConstant: 52),
+            buttonStackView.bottomAnchor.constraint(equalTo: qrContainerView.bottomAnchor, constant: -8)
         ])
     }
 }
@@ -321,8 +390,12 @@ extension VISAViewController {
             var config = UIButton.Configuration.filled()
             
             config.title = title
-            config.image = UIImage(named: systemImage)?
-                .resized(to: CGSize(width: 20, height: 20))
+            let targetSize = CGSize(width: 20, height: 20)
+            if let base = UIImage(systemName: systemImage) ?? UIImage(named: systemImage) {
+                config.image = base.resized(to: targetSize)
+            } else {
+                config.image = nil
+            }
             
             config.imagePlacement = .leading
             config.imagePadding = 8
@@ -336,16 +409,21 @@ extension VISAViewController {
             button.clipsToBounds = true
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.gray.cgColor
+            button.tintColor = .black
             return button
         }
         
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
+        let targetSize = CGSize(width: 20, height: 20)
+        if let base = UIImage(systemName: systemImage) ?? UIImage(named: systemImage) {
+            button.setImage(base.resized(to: targetSize), for: .normal)
+            button.tintColor = .black
+        }
         button.addTarget(self, action: action, for: .touchUpInside)
         return button
     }
 }
-
 
 extension VISAViewController {
     private func showToast(_ message: String) {
@@ -394,4 +472,3 @@ extension UIView {
         }
     }
 }
-

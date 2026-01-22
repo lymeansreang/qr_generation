@@ -21,12 +21,32 @@ class CopyQRView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.textAlignment = .center
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    // New: amount label shown below the name
+    private let amountLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        label.textAlignment = .center
+        label.textColor = .black
+        label.isHidden = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let qrImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private let bakongIconView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "bakong_qr"))
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +65,15 @@ class CopyQRView: UIView {
         }
     }
     
+    var amountString: String? {
+        
+        didSet { updateAmountLabel() }
+       
+    }
+    var currencyNumeric: String? {
+        didSet { updateAmountLabel() }
+    }
+    
     override init(frame: CGRect) {
         super .init(frame: frame)
         backgroundColor = .white
@@ -58,7 +87,9 @@ class CopyQRView: UIView {
     private func setupView() {
         addSubview(containerImageView)
         containerImageView.addSubview(userNameLabel)
+        containerImageView.addSubview(amountLabel)
         containerImageView.addSubview(qrImageView)
+        qrImageView.addSubview(bakongIconView)
         
         NSLayoutConstraint.activate([
             containerImageView.topAnchor.constraint(equalTo: topAnchor),
@@ -67,13 +98,33 @@ class CopyQRView: UIView {
             containerImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             userNameLabel.centerXAnchor.constraint(equalTo: containerImageView.centerXAnchor),
-            userNameLabel.topAnchor.constraint(equalTo: containerImageView.topAnchor, constant: 50),
+            userNameLabel.topAnchor.constraint(equalTo: containerImageView.topAnchor, constant: 40),
+            
+            amountLabel.centerXAnchor.constraint(equalTo: containerImageView.centerXAnchor),
+            amountLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 4),
             
             qrImageView.centerXAnchor.constraint(equalTo: containerImageView.centerXAnchor),
             qrImageView.centerYAnchor.constraint(equalTo: containerImageView.centerYAnchor),
             qrImageView.widthAnchor.constraint(lessThanOrEqualTo: containerImageView.widthAnchor, multiplier: 0.6),
-            qrImageView.heightAnchor.constraint(equalTo: qrImageView.widthAnchor)
+            qrImageView.heightAnchor.constraint(equalTo: qrImageView.widthAnchor),
+            
+            bakongIconView.centerXAnchor.constraint(equalTo: qrImageView.centerXAnchor),
+            bakongIconView.centerYAnchor.constraint(equalTo: qrImageView.centerYAnchor),
+            bakongIconView.widthAnchor.constraint(equalToConstant: 32),
+            bakongIconView.heightAnchor.constraint(equalToConstant: 32),
         ])
     }
     
+    private func updateAmountLabel() {
+        let raw = (amountString ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !raw.isEmpty else {
+            amountLabel.text = nil
+            amountLabel.isHidden = true
+            return
+        }
+        let isKHR = (currencyNumeric ?? "116") == "116"
+        let symbol = isKHR ? "៛" : "$"
+        amountLabel.text = "\(raw) \(symbol)"
+        amountLabel.isHidden = false
+    }
 }

@@ -38,26 +38,26 @@ struct EMVQR {
         isDynamic: Bool = true
     ) -> String {
 
-        var s = ""
-        s += tlv("00", "01")                 // Payload Format Indicator
-        s += tlv("01", isDynamic ? "12" : "11") // POI Method
-        s += tlv("52", "0000")               // MCC
-        s += tlv("53", currencyNumeric)      // Currency
+        var stringPayload = ""
+        stringPayload += tlv("00", "01")                 // Payload Format Indicator
+        stringPayload += tlv("01", isDynamic ? "12" : "11") // POI Method
+        stringPayload += tlv("52", "0000")               // MCC
+        stringPayload += tlv("53", currencyNumeric)      // Currency
 
         if let amount, !amount.isEmpty {
-            s += tlv("54", amount)           // Amount
+            stringPayload += tlv("54", amount)           // Amount
         }
 
-        s += tlv("58", countryCode)          // Country
-        s += tlv("59", merchantName)         // Merchant Name
-        s += tlv("60", merchantCity)         // Merchant City
+        stringPayload += tlv("58", countryCode)          // Country
+        stringPayload += tlv("59", merchantName)         // Merchant Name
+        stringPayload += tlv("60", merchantCity)         // Merchant City
 
         // CRC placeholder then compute
-        s += "6304"
-        let crc = crc16ccitt(s)
-        s += String(format: "%04X", crc)
+        stringPayload += "6304"
+        let crc = crc16ccitt(stringPayload)
+        stringPayload += String(format: "%04X", crc)
 
-        return s
+        return stringPayload
     }
 
     // CRC16-CCITT (FALSE) used by EMVCo MPQR
