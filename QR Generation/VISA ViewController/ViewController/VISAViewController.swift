@@ -8,6 +8,7 @@
 import UIKit
 import CoreImage
 import Photos
+import QRGenerator
 
 final class VISAViewController: UIViewController {
     
@@ -141,7 +142,6 @@ final class VISAViewController: UIViewController {
     var merchantCity: String?
     var merchantCurrencyNumeric: String? // "116" for ៛, else $
     
-    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -277,20 +277,18 @@ final class VISAViewController: UIViewController {
         let rawAmount = amountTextField.text ?? ""
         let normalizedAmount = normalizedAmountString(rawAmount)
         
-        // Use passed values where available
-        let name = userName ?? userNameLabel.text ?? "Merchant"
-        let city = merchantCity ?? "Phnom Penh"
-        let ccyNumeric = merchantCurrencyNumeric ?? "116"
-        
-        // Starter EMV-like payload (minimal template).
-        let payload = EMVQR.buildMerchantPresented(
-            merchantName: name,
-            merchantCity: city,
+        // Prepare SDK-friendly input
+        let input = MerchantQRPayload.Input(
+            merchantName: userName ?? userNameLabel.text ?? "Merchant",
+            merchantCity: merchantCity ?? "Phnom Penh",
             countryCode: "KH",
-            currencyNumeric: ccyNumeric,
+            currencyNumeric: merchantCurrencyNumeric ?? "116",
             amount: normalizedAmount.isEmpty ? nil : normalizedAmount,
             isDynamic: true
         )
+        
+        // Build via SDK hook (or fallback if not wired)
+        let payload = MerchantQRPayload.build(input)
         
         currentPayload = payload
         visaQRImageView.image = QRCodeGenerator.makeQR(from: payload, scale: 10)

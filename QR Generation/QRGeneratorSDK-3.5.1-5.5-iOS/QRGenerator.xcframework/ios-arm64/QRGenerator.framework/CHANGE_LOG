@@ -1,0 +1,74 @@
+Version : 3.5.1
+- SDK for Xcode 13.2.1
+
+---------------------------------------
+
+Version : 3.5.0
+- SDK for Xcode 13.0
+
+---------------------------------------
+
+Version : 3.4.0
+- Minimum supported OS version to iOS 12.4.8
+- Migration to XCFramework
+
+---------------------------------------
+
+Version : 3.3.0
+- SDK for Xcode 12.2, swift 5.3.1 with Build Libraries for distribution as true.
+
+---------------------------------------
+
+Version : 3.2.0
+- Minimum SDK version iOS 11.3.
+
+---------------------------------------
+
+Version : 3.1.0
+- Implementation of new EMVCO code change. Add code for Tag 62 and sub tag 10 and 11.
+- Code update for latest swift and optimization.
+- Code clean and remove deprecated methods.
+
+---------------------------------------
+
+Version : 3.0.0
+- Swift version 4.2 to Swift version 5.0 migration.
+- Code clean and remove deprecated methods.
+    
+---------------------------------------
+
+Version : 2.9.0
+- SDK for Xcode 10.2
+
+---------------------------------------
+
+Version : 2.8.0
+- Few bug fixes and improvement.
+
+---------------------------------------
+
+Version : 2.7.0
+- Change to swift 4 as swift language in project setting
+
+---------------------------------------
+
+Version : 2.3.0
+- Bug fixes and performance improvements
+
+---------------------------------------
+
+Version : 2.2.0
+- minor improvement
+
+---------------------------------------
+
+Version : 2.1.0
+- Added tag 03 which is visa alias
+
+---------------------------------------
+
+Version : 1.0.0
+
+- QR Generator SDK to create TLV string.
+
+---------------------------------------

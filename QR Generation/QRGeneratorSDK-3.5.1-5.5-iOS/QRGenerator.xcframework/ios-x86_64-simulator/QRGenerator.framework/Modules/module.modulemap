@@ -1,0 +1,11 @@
+framework module QRGenerator {
+  umbrella header "QRGenerator.h"
+
+  export *
+  module * { export * }
+}
+
+module QRGenerator.Swift {
+    header "QRGenerator-Swift.h"
+    requires objc
+}
