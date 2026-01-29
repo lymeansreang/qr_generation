@@ -1,0 +1,11 @@
+framework module MVisaQRParser {
+  umbrella header "MVisaQRParser.h"
+
+  export *
+  module * { export * }
+}
+
+module MVisaQRParser.Swift {
+    header "MVisaQRParser-Swift.h"
+    requires objc
+}

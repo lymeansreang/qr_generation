@@ -8,4 +8,7 @@
 APP_ENV = uat
 API_BASE_URL = https://uat-api.yourdomain.com
 PRODUCT_BUNDLE_IDENTIFIER = kh.com.aeon.base_project.uat
-APP_DISPLAY_NAME = QR Uat
+APP_DISPLAY_NAME = Uat
+
+// App Icon set for PROD
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon-UAT

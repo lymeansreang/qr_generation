@@ -8,5 +8,7 @@
 APP_ENV = dev
 API_BASE_URL = https://dev-api.yourdomain.com
 PRODUCT_BUNDLE_IDENTIFIER = kh.com.aeon.base_project.dev
-APP_DISPLAY_NAME = QR Dev
+APP_DISPLAY_NAME = Dev
 
+// App Icon set for PROD
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon-DEV

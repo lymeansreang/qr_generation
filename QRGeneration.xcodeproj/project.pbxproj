@@ -1,0 +1,1380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E2BBFB22F1F6ACB000F8419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBFAA2F1F6ACB000F8419 /* Assets.xcassets */; };
+		3E2BBFB42F1F6ACB000F8419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBFAD2F1F6ACB000F8419 /* LaunchScreen.storyboard */; };
+		3E2BBFB52F1F6ACB000F8419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBFAF2F1F6ACB000F8419 /* Main.storyboard */; };
+		3E2BBFB62F1F6ACB000F8419 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFA72F1F6ACB000F8419 /* ViewController.swift */; };
+		3E2BBFB72F1F6ACB000F8419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFA92F1F6ACB000F8419 /* AppDelegate.swift */; };
+		3E2BBFB82F1F6ACB000F8419 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFB02F1F6ACB000F8419 /* SceneDelegate.swift */; };
+		3E2BBFBC2F1F6AF7000F8419 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFBB2F1F6AF7000F8419 /* model.swift */; };
+		3E2BBFBF2F1F79BE000F8419 /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFBE2F1F79BE000F8419 /* ScanQRViewController.swift */; };
+		3E2BBFC32F1F825F000F8419 /* KHQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFC22F1F825F000F8419 /* KHQRViewController.swift */; };
+		3E2BBFC72F1F85DD000F8419 /* VISAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFC62F1F85DD000F8419 /* VISAViewController.swift */; };
+		3E6166C32F2B10EA00273668 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD1722F275B46005D8ECF /* UIColor+Hex.swift */; };
+		3E6166C42F2B10EA00273668 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFA72F1F6ACB000F8419 /* ViewController.swift */; };
+		3E6166C52F2B10EA00273668 /* EnvBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD1372F206C06005D8ECF /* EnvBanner.swift */; };
+		3E6166C62F2B10EA00273668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFA92F1F6ACB000F8419 /* AppDelegate.swift */; };
+		3E6166C72F2B10EA00273668 /* KHQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFC22F1F825F000F8419 /* KHQRViewController.swift */; };
+		3E6166C82F2B10EA00273668 /* CopyQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0824102F2122D400684AE0 /* CopyQRView.swift */; };
+		3E6166C92F2B10EA00273668 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFB02F1F6ACB000F8419 /* SceneDelegate.swift */; };
+		3E6166CA2F2B10EA00273668 /* VISAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFC62F1F85DD000F8419 /* VISAViewController.swift */; };
+		3E6166CB2F2B10EA00273668 /* QRGeneratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13A2F20D9A1005D8ECF /* QRGeneratorModel.swift */; };
+		3E6166CC2F2B10EA00273668 /* MerchantListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13F2F21CDBE005D8ECF /* MerchantListingTableViewCell.swift */; };
+		3E6166CD2F2B10EA00273668 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFBB2F1F6AF7000F8419 /* model.swift */; };
+		3E6166CE2F2B10EA00273668 /* MerchantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD1412F21D56C005D8ECF /* MerchantModel.swift */; };
+		3E6166CF2F2B10EA00273668 /* ListMerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13C2F21CA4B005D8ECF /* ListMerchantViewController.swift */; };
+		3E6166D02F2B10EA00273668 /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBFBE2F1F79BE000F8419 /* ScanQRViewController.swift */; };
+		3E6166D22F2B10EA00273668 /* Pods_QR_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A954CC12214889B79FD48D8 /* Pods_QR_.framework */; };
+		3E6166D42F2B10EA00273668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBFAA2F1F6ACB000F8419 /* Assets.xcassets */; };
+		3E6166D52F2B10EA00273668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBFAD2F1F6ACB000F8419 /* LaunchScreen.storyboard */; };
+		3E6166D62F2B10EA00273668 /* UAT.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EADD1332F206917005D8ECF /* UAT.xcconfig */; };
+		3E6166D72F2B10EA00273668 /* Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EADD1312F20690F005D8ECF /* Dev.xcconfig */; };
+		3E6166D82F2B10EA00273668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBFAF2F1F6ACB000F8419 /* Main.storyboard */; };
+		3E6166D92F2B10EA00273668 /* PROD.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EADD1352F20692D005D8ECF /* PROD.xcconfig */; };
+		3EADD1322F20690F005D8ECF /* Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EADD1312F20690F005D8ECF /* Dev.xcconfig */; };
+		3EADD1342F206927005D8ECF /* UAT.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EADD1332F206917005D8ECF /* UAT.xcconfig */; };
+		3EADD1362F20693D005D8ECF /* PROD.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EADD1352F20692D005D8ECF /* PROD.xcconfig */; };
+		3EADD1382F206C06005D8ECF /* EnvBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD1372F206C06005D8ECF /* EnvBanner.swift */; };
+		3EADD13B2F20D9A1005D8ECF /* QRGeneratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13A2F20D9A1005D8ECF /* QRGeneratorModel.swift */; };
+		3EADD13D2F21CA4B005D8ECF /* ListMerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13C2F21CA4B005D8ECF /* ListMerchantViewController.swift */; };
+		3EADD1402F21CDBE005D8ECF /* MerchantListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD13F2F21CDBE005D8ECF /* MerchantListingTableViewCell.swift */; };
+		3EADD1422F21D5DB005D8ECF /* MerchantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD1412F21D56C005D8ECF /* MerchantModel.swift */; };
+		3EADD1732F276124005D8ECF /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EADD1722F275B46005D8ECF /* UIColor+Hex.swift */; };
+		5167368188864981BA6050D6 /* Pods_QR_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A954CC12214889B79FD48D8 /* Pods_QR_.framework */; };
+		FC0824112F2122D400684AE0 /* CopyQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0824102F2122D400684AE0 /* CopyQRView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0824BC02B6774DEA593F9FF9 /* Pods-QR .uat-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR .uat-release.xcconfig"; path = "Target Support Files/Pods-QR /Pods-QR .uat-release.xcconfig"; sourceTree = "<group>"; };
+		09DE9F0D7A1733814E388ED6 /* Pods-QR .dev-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR .dev-release.xcconfig"; path = "Target Support Files/Pods-QR /Pods-QR .dev-release.xcconfig"; sourceTree = "<group>"; };
+		3E2BBF8D2F1F67ED000F8419 /* QR  .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR  .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E2BBFA72F1F6ACB000F8419 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E2BBFA92F1F6ACB000F8419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E2BBFAA2F1F6ACB000F8419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E2BBFAB2F1F6ACB000F8419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E2BBFAC2F1F6ACB000F8419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E2BBFAE2F1F6ACB000F8419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E2BBFB02F1F6ACB000F8419 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3E2BBFBB2F1F6AF7000F8419 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		3E2BBFBE2F1F79BE000F8419 /* ScanQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
+		3E2BBFC22F1F825F000F8419 /* KHQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KHQRViewController.swift; sourceTree = "<group>"; };
+		3E2BBFC62F1F85DD000F8419 /* VISAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VISAViewController.swift; sourceTree = "<group>"; };
+		3E6166E12F2B10EA00273668 /* Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6166E22F2B10EA00273668 /* QR  copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QR  copy-Info.plist"; path = "/Users/aeon/Documents/This pc/QRGeneration/QR  copy-Info.plist"; sourceTree = "<absolute>"; };
+		3EADD1312F20690F005D8ECF /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
+		3EADD1332F206917005D8ECF /* UAT.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UAT.xcconfig; sourceTree = "<group>"; };
+		3EADD1352F20692D005D8ECF /* PROD.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PROD.xcconfig; sourceTree = "<group>"; };
+		3EADD1372F206C06005D8ECF /* EnvBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvBanner.swift; sourceTree = "<group>"; };
+		3EADD13A2F20D9A1005D8ECF /* QRGeneratorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorModel.swift; sourceTree = "<group>"; };
+		3EADD13C2F21CA4B005D8ECF /* ListMerchantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMerchantViewController.swift; sourceTree = "<group>"; };
+		3EADD13F2F21CDBE005D8ECF /* MerchantListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantListingTableViewCell.swift; sourceTree = "<group>"; };
+		3EADD1412F21D56C005D8ECF /* MerchantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantModel.swift; sourceTree = "<group>"; };
+		3EADD1662F273CE0005D8ECF /* MVisaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MVisaSDK.framework; path = ../../../Downloads/iOS_mVisa/mVisaSample/mVisaSample/MVisaSDK.framework; sourceTree = "<group>"; };
+		3EADD1722F275B46005D8ECF /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		43483E8E8432DBF5C46B62FE /* Pods-QR .prod-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR .prod-debug.xcconfig"; path = "Target Support Files/Pods-QR /Pods-QR .prod-debug.xcconfig"; sourceTree = "<group>"; };
+		4BCBDB220F217BFCFB12437B /* Pods-QR .prod-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR .prod-release.xcconfig"; path = "Target Support Files/Pods-QR /Pods-QR .prod-release.xcconfig"; sourceTree = "<group>"; };
+		57F27B3D6A908B039734E921 /* Pods-QR .uat-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR .uat-debug.xcconfig"; path = "Target Support Files/Pods-QR /Pods-QR .uat-debug.xcconfig"; sourceTree = "<group>"; };
+		70449E2134EA1317E96E3358 /* Pods-QR .dev-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR .dev-debug.xcconfig"; path = "Target Support Files/Pods-QR /Pods-QR .dev-debug.xcconfig"; sourceTree = "<group>"; };
+		9A954CC12214889B79FD48D8 /* Pods_QR_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QR_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC0824102F2122D400684AE0 /* CopyQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyQRView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E2BBF8A2F1F67ED000F8419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5167368188864981BA6050D6 /* Pods_QR_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E6166D12F2B10EA00273668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E6166D22F2B10EA00273668 /* Pods_QR_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E2BBF842F1F67ED000F8419 = {
+			isa = PBXGroup;
+			children = (
+				3EADD1302F2068ED005D8ECF /* Configuration */,
+				3E2BBF8E2F1F67ED000F8419 /* Products */,
+				3E2BBFB12F1F6ACB000F8419 /* QRGeneration */,
+				3EADD15E2F2387B6005D8ECF /* Frameworks */,
+				B2B3D40EE662ABF576C0C7A0 /* Pods */,
+				3E6166E22F2B10EA00273668 /* QR  copy-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		3E2BBF8E2F1F67ED000F8419 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBF8D2F1F67ED000F8419 /* QR  .app */,
+				3E6166E12F2B10EA00273668 /* Dev.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E2BBFA82F1F6ACB000F8419 /* Home ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBFBA2F1F6AD9000F8419 /* ViewController */,
+				3E2BBFB92F1F6ACF000F8419 /* Model */,
+			);
+			path = "Home ViewController";
+			sourceTree = "<group>";
+		};
+		3E2BBFB12F1F6ACB000F8419 /* QRGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBFC42F1F85BB000F8419 /* VISA ViewController */,
+				3E2BBFC02F1F822F000F8419 /* KHQR ViewController */,
+				3E2BBFBD2F1F7998000F8419 /* Scan QR ViewController */,
+				3E2BBFA82F1F6ACB000F8419 /* Home ViewController */,
+				3E2BBFA92F1F6ACB000F8419 /* AppDelegate.swift */,
+				3E2BBFAA2F1F6ACB000F8419 /* Assets.xcassets */,
+				3E2BBFAB2F1F6ACB000F8419 /* Info.plist */,
+				3E2BBFAD2F1F6ACB000F8419 /* LaunchScreen.storyboard */,
+				3E2BBFAF2F1F6ACB000F8419 /* Main.storyboard */,
+				3E2BBFB02F1F6ACB000F8419 /* SceneDelegate.swift */,
+				3EADD1702F275A97005D8ECF /* Assets */,
+			);
+			path = QRGeneration;
+			sourceTree = "<group>";
+		};
+		3E2BBFB92F1F6ACF000F8419 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBFBB2F1F6AF7000F8419 /* model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E2BBFBA2F1F6AD9000F8419 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBFA72F1F6ACB000F8419 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3E2BBFBD2F1F7998000F8419 /* Scan QR ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBFBE2F1F79BE000F8419 /* ScanQRViewController.swift */,
+			);
+			path = "Scan QR ViewController";
+			sourceTree = "<group>";
+		};
+		3E2BBFC02F1F822F000F8419 /* KHQR ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBFC12F1F8243000F8419 /* ViewContoller */,
+			);
+			path = "KHQR ViewController";
+			sourceTree = "<group>";
+		};
+		3E2BBFC12F1F8243000F8419 /* ViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBFC22F1F825F000F8419 /* KHQRViewController.swift */,
+			);
+			path = ViewContoller;
+			sourceTree = "<group>";
+		};
+		3E2BBFC42F1F85BB000F8419 /* VISA ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3EADD13E2F21CB38005D8ECF /* View */,
+				3EADD1392F20D989005D8ECF /* Model */,
+				3E2BBFC52F1F85C7000F8419 /* ViewController */,
+			);
+			path = "VISA ViewController";
+			sourceTree = "<group>";
+		};
+		3E2BBFC52F1F85C7000F8419 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBFC62F1F85DD000F8419 /* VISAViewController.swift */,
+				3EADD13C2F21CA4B005D8ECF /* ListMerchantViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3EADD1302F2068ED005D8ECF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3EADD1352F20692D005D8ECF /* PROD.xcconfig */,
+				3EADD1332F206917005D8ECF /* UAT.xcconfig */,
+				3EADD1312F20690F005D8ECF /* Dev.xcconfig */,
+				3EADD1372F206C06005D8ECF /* EnvBanner.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3EADD1392F20D989005D8ECF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EADD1412F21D56C005D8ECF /* MerchantModel.swift */,
+				3EADD13A2F20D9A1005D8ECF /* QRGeneratorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3EADD13E2F21CB38005D8ECF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC0824102F2122D400684AE0 /* CopyQRView.swift */,
+				3EADD13F2F21CDBE005D8ECF /* MerchantListingTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3EADD15E2F2387B6005D8ECF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EADD1662F273CE0005D8ECF /* MVisaSDK.framework */,
+				9A954CC12214889B79FD48D8 /* Pods_QR_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EADD1702F275A97005D8ECF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3EADD1712F275ACC005D8ECF /* Base Color */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3EADD1712F275ACC005D8ECF /* Base Color */ = {
+			isa = PBXGroup;
+			children = (
+				3EADD1722F275B46005D8ECF /* UIColor+Hex.swift */,
+			);
+			path = "Base Color";
+			sourceTree = "<group>";
+		};
+		B2B3D40EE662ABF576C0C7A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43483E8E8432DBF5C46B62FE /* Pods-QR .prod-debug.xcconfig */,
+				57F27B3D6A908B039734E921 /* Pods-QR .uat-debug.xcconfig */,
+				70449E2134EA1317E96E3358 /* Pods-QR .dev-debug.xcconfig */,
+				4BCBDB220F217BFCFB12437B /* Pods-QR .prod-release.xcconfig */,
+				0824BC02B6774DEA593F9FF9 /* Pods-QR .uat-release.xcconfig */,
+				09DE9F0D7A1733814E388ED6 /* Pods-QR .dev-release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E2BBF8C2F1F67ED000F8419 /* QR  */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E2BBFA02F1F67EF000F8419 /* Build configuration list for PBXNativeTarget "QR " */;
+			buildPhases = (
+				49479DBAA7FB3ABD0E85B7DC /* [CP] Check Pods Manifest.lock */,
+				3E2BBF892F1F67ED000F8419 /* Sources */,
+				3E2BBF8A2F1F67ED000F8419 /* Frameworks */,
+				3E2BBF8B2F1F67ED000F8419 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QR ";
+			productName = "QR Generation";
+			productReference = 3E2BBF8D2F1F67ED000F8419 /* QR  .app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E6166C02F2B10EA00273668 /* Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E6166DA2F2B10EA00273668 /* Build configuration list for PBXNativeTarget "Dev" */;
+			buildPhases = (
+				3E6166C12F2B10EA00273668 /* [CP] Check Pods Manifest.lock */,
+				3E6166C22F2B10EA00273668 /* Sources */,
+				3E6166D12F2B10EA00273668 /* Frameworks */,
+				3E6166D32F2B10EA00273668 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dev;
+			productName = "QR Generation";
+			productReference = 3E6166E12F2B10EA00273668 /* Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E2BBF852F1F67ED000F8419 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					3E2BBF8C2F1F67ED000F8419 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 3E2BBF882F1F67ED000F8419 /* Build configuration list for PBXProject "QRGeneration" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E2BBF842F1F67ED000F8419;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3E2BBF8E2F1F67ED000F8419 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E2BBF8C2F1F67ED000F8419 /* QR  */,
+				3E6166C02F2B10EA00273668 /* Dev */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E2BBF8B2F1F67ED000F8419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E2BBFB22F1F6ACB000F8419 /* Assets.xcassets in Resources */,
+				3E2BBFB42F1F6ACB000F8419 /* LaunchScreen.storyboard in Resources */,
+				3EADD1342F206927005D8ECF /* UAT.xcconfig in Resources */,
+				3EADD1322F20690F005D8ECF /* Dev.xcconfig in Resources */,
+				3E2BBFB52F1F6ACB000F8419 /* Main.storyboard in Resources */,
+				3EADD1362F20693D005D8ECF /* PROD.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E6166D32F2B10EA00273668 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E6166D42F2B10EA00273668 /* Assets.xcassets in Resources */,
+				3E6166D52F2B10EA00273668 /* LaunchScreen.storyboard in Resources */,
+				3E6166D62F2B10EA00273668 /* UAT.xcconfig in Resources */,
+				3E6166D72F2B10EA00273668 /* Dev.xcconfig in Resources */,
+				3E6166D82F2B10EA00273668 /* Main.storyboard in Resources */,
+				3E6166D92F2B10EA00273668 /* PROD.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E6166C12F2B10EA00273668 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QR -checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49479DBAA7FB3ABD0E85B7DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QR -checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E2BBF892F1F67ED000F8419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EADD1732F276124005D8ECF /* UIColor+Hex.swift in Sources */,
+				3E2BBFB62F1F6ACB000F8419 /* ViewController.swift in Sources */,
+				3EADD1382F206C06005D8ECF /* EnvBanner.swift in Sources */,
+				3E2BBFB72F1F6ACB000F8419 /* AppDelegate.swift in Sources */,
+				3E2BBFC32F1F825F000F8419 /* KHQRViewController.swift in Sources */,
+				FC0824112F2122D400684AE0 /* CopyQRView.swift in Sources */,
+				3E2BBFB82F1F6ACB000F8419 /* SceneDelegate.swift in Sources */,
+				3E2BBFC72F1F85DD000F8419 /* VISAViewController.swift in Sources */,
+				3EADD13B2F20D9A1005D8ECF /* QRGeneratorModel.swift in Sources */,
+				3EADD1402F21CDBE005D8ECF /* MerchantListingTableViewCell.swift in Sources */,
+				3E2BBFBC2F1F6AF7000F8419 /* model.swift in Sources */,
+				3EADD1422F21D5DB005D8ECF /* MerchantModel.swift in Sources */,
+				3EADD13D2F21CA4B005D8ECF /* ListMerchantViewController.swift in Sources */,
+				3E2BBFBF2F1F79BE000F8419 /* ScanQRViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E6166C22F2B10EA00273668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E6166C32F2B10EA00273668 /* UIColor+Hex.swift in Sources */,
+				3E6166C42F2B10EA00273668 /* ViewController.swift in Sources */,
+				3E6166C52F2B10EA00273668 /* EnvBanner.swift in Sources */,
+				3E6166C62F2B10EA00273668 /* AppDelegate.swift in Sources */,
+				3E6166C72F2B10EA00273668 /* KHQRViewController.swift in Sources */,
+				3E6166C82F2B10EA00273668 /* CopyQRView.swift in Sources */,
+				3E6166C92F2B10EA00273668 /* SceneDelegate.swift in Sources */,
+				3E6166CA2F2B10EA00273668 /* VISAViewController.swift in Sources */,
+				3E6166CB2F2B10EA00273668 /* QRGeneratorModel.swift in Sources */,
+				3E6166CC2F2B10EA00273668 /* MerchantListingTableViewCell.swift in Sources */,
+				3E6166CD2F2B10EA00273668 /* model.swift in Sources */,
+				3E6166CE2F2B10EA00273668 /* MerchantModel.swift in Sources */,
+				3E6166CF2F2B10EA00273668 /* ListMerchantViewController.swift in Sources */,
+				3E6166D02F2B10EA00273668 /* ScanQRViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3E2BBFAD2F1F6ACB000F8419 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E2BBFAC2F1F6ACB000F8419 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3E2BBFAF2F1F6ACB000F8419 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E2BBFAE2F1F6ACB000F8419 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E2BBFA12F1F67EF000F8419 /* PROD-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43483E8E8432DBF5C46B62FE /* Pods-QR .prod-debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QRGeneration/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.aeon.base-project";
+				PRODUCT_NAME = "$(TARGET_NAME) ";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "PROD-Debug";
+		};
+		3E2BBFA22F1F67EF000F8419 /* PROD-Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BCBDB220F217BFCFB12437B /* Pods-QR .prod-release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QRGeneration/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.aeon.base-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "PROD-Release";
+		};
+		3E2BBFA32F1F67EF000F8419 /* PROD-Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = VM2TCL96L7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "PROD-Debug";
+		};
+		3E2BBFA42F1F67EF000F8419 /* PROD-Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VM2TCL96L7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "PROD-Release";
+		};
+		3E6166DB2F2B10EA00273668 /* PROD-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43483E8E8432DBF5C46B62FE /* Pods-QR .prod-debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "QR  copy-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.aeon.base-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "PROD-Debug";
+		};
+		3E6166DC2F2B10EA00273668 /* UAT-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F27B3D6A908B039734E921 /* Pods-QR .uat-debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "QR  copy-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.aeon.base-project.uat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "UAT-Debug";
+		};
+		3E6166DD2F2B10EA00273668 /* DEV-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70449E2134EA1317E96E3358 /* Pods-QR .dev-debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "QR  copy-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kh.com.aeon.baseproject.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "DEV-Debug";
+		};
+		3E6166DE2F2B10EA00273668 /* PROD-Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BCBDB220F217BFCFB12437B /* Pods-QR .prod-release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "QR  copy-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.aeon.base-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "PROD-Release";
+		};
+		3E6166DF2F2B10EA00273668 /* UAT-Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0824BC02B6774DEA593F9FF9 /* Pods-QR .uat-release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "QR  copy-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.aeon.base-project.uat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "UAT-Release";
+		};
+		3E6166E02F2B10EA00273668 /* DEV-Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09DE9F0D7A1733814E388ED6 /* Pods-QR .dev-release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "QR  copy-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kh.com.aeon.baseproject.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "DEV-Release";
+		};
+		3EADD1282F2065AC005D8ECF /* UAT-Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = VM2TCL96L7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "UAT-Debug";
+		};
+		3EADD1292F2065AC005D8ECF /* UAT-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F27B3D6A908B039734E921 /* Pods-QR .uat-debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QRGeneration/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.aeon.base-project.uat";
+				PRODUCT_NAME = "$(TARGET_NAME) Uat";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "UAT-Debug";
+		};
+		3EADD12A2F2065CC005D8ECF /* DEV-Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = VM2TCL96L7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "DEV-Debug";
+		};
+		3EADD12B2F2065CC005D8ECF /* DEV-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70449E2134EA1317E96E3358 /* Pods-QR .dev-debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QRGeneration/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kh.com.aeon.baseproject.dev;
+				PRODUCT_NAME = "$(TARGET_NAME) Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "DEV-Debug";
+		};
+		3EADD12C2F2065E4005D8ECF /* UAT-Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VM2TCL96L7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "UAT-Release";
+		};
+		3EADD12D2F2065E4005D8ECF /* UAT-Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0824BC02B6774DEA593F9FF9 /* Pods-QR .uat-release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QRGeneration/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.aeon.base-project.uat";
+				PRODUCT_NAME = "$(TARGET_NAME) Uat";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "UAT-Release";
+		};
+		3EADD12E2F2065F0005D8ECF /* DEV-Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VM2TCL96L7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "DEV-Release";
+		};
+		3EADD12F2F2065F0005D8ECF /* DEV-Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09DE9F0D7A1733814E388ED6 /* Pods-QR .dev-release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8AL57WK63T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QRGeneration/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera to scan QR codes";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_MAP_FILE_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kh.com.aeon.baseproject.dev;
+				PRODUCT_NAME = "$(TARGET_NAME) Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "DEV-Release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E2BBF882F1F67ED000F8419 /* Build configuration list for PBXProject "QRGeneration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E2BBFA32F1F67EF000F8419 /* PROD-Debug */,
+				3EADD1282F2065AC005D8ECF /* UAT-Debug */,
+				3EADD12A2F2065CC005D8ECF /* DEV-Debug */,
+				3E2BBFA42F1F67EF000F8419 /* PROD-Release */,
+				3EADD12C2F2065E4005D8ECF /* UAT-Release */,
+				3EADD12E2F2065F0005D8ECF /* DEV-Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "DEV-Debug";
+		};
+		3E2BBFA02F1F67EF000F8419 /* Build configuration list for PBXNativeTarget "QR " */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E2BBFA12F1F67EF000F8419 /* PROD-Debug */,
+				3EADD1292F2065AC005D8ECF /* UAT-Debug */,
+				3EADD12B2F2065CC005D8ECF /* DEV-Debug */,
+				3E2BBFA22F1F67EF000F8419 /* PROD-Release */,
+				3EADD12D2F2065E4005D8ECF /* UAT-Release */,
+				3EADD12F2F2065F0005D8ECF /* DEV-Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "DEV-Debug";
+		};
+		3E6166DA2F2B10EA00273668 /* Build configuration list for PBXNativeTarget "Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E6166DB2F2B10EA00273668 /* PROD-Debug */,
+				3E6166DC2F2B10EA00273668 /* UAT-Debug */,
+				3E6166DD2F2B10EA00273668 /* DEV-Debug */,
+				3E6166DE2F2B10EA00273668 /* PROD-Release */,
+				3E6166DF2F2B10EA00273668 /* UAT-Release */,
+				3E6166E02F2B10EA00273668 /* DEV-Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "DEV-Debug";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E2BBF852F1F67ED000F8419 /* Project object */;
+}

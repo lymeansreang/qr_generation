@@ -1,0 +1,213 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target x86_64-apple-ios12.4.8-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MVisaQRParser
+import Foundation
+@_exported import MVisaQRParser
+import Swift
+import UIKit
+import _Concurrency
+@_hasMissingDesignatedInitializers @objc final public class QRCodeParserResponse : ObjectiveC.NSObject {
+  @objc final public let qrCodeData: MVisaQRParser.QRCodeData?
+  @objc final public let qrCodeError: MVisaQRParser.QRCodeError?
+  @objc final public let qrErrors: [MVisaQRParser.QRError]?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class QRCodeParser : ObjectiveC.NSObject {
+  @objc final public class func parseQRDataForString(qrCodeString qrCodeStr: Swift.String, completionHandler: (Swift.String?) -> Swift.Void)
+  @objc final public class func parseQRDataForString(qrCodeString qrCodeStr: Swift.String) -> Swift.String
+  @objc final public class func parseQRData(qrCodeString qrCodeStr: Swift.String, completionHandler: (MVisaQRParser.QRCodeParserResponse?) -> Swift.Void)
+  @objc final public class func parseQRData(qrCodeString qrCodeStr: Swift.String) -> MVisaQRParser.QRCodeParserResponse
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class MVISAMerchantTLV : ObjectiveC.NSObject {
+  @objc public var isTipAvailable: Swift.Bool
+  @objc public var payloadFormatIndicator: Swift.String?
+  @objc public var pointOfInitiation: Swift.String?
+  @objc public var mVisaMerchantID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var mVisaMerchantPAN: Swift.String?
+  @objc public var aliasID: Swift.String?
+  @objc public var masterCardPAN1: Swift.String?
+  @objc public var masterCardPAN2: Swift.String?
+  @objc public var npciid1: Swift.String?
+  @objc public var npciid2: Swift.String?
+  @objc public var tag08: Swift.String?
+  @objc public var discover1: Swift.String?
+  @objc public var discover2: Swift.String?
+  @objc public var amex1: Swift.String?
+  @objc public var amex2: Swift.String?
+  @objc public var jcb1: Swift.String?
+  @objc public var jcb2: Swift.String?
+  @objc public var unionPay1: Swift.String?
+  @objc public var unionPay2: Swift.String?
+  @objc public var tag17: Swift.String?
+  @objc public var tag18: Swift.String?
+  @objc public var tag19: Swift.String?
+  @objc public var tag20: Swift.String?
+  @objc public var tag21: Swift.String?
+  @objc public var tag22: Swift.String?
+  @objc public var tag23: Swift.String?
+  @objc public var tag24: Swift.String?
+  @objc public var tag25: Swift.String?
+  @objc public var tag26: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag27: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag28: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag29: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag30: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag31: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag32: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag33: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag34: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag35: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag36: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag37: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag38: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag39: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag40: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag41: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag42: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag43: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag44: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag45: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag46: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag47: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag48: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag49: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag50: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag51: Swift.Dictionary<Swift.String, Any>?
+  @objc public var merchantCategoryCode: Swift.String?
+  @objc public var currencyCode: Swift.String?
+  @objc public var transactionAmount: Swift.String?
+  @objc public var tipAndFeeIndicator: Swift.String?
+  @objc public var convenienceFeeAmount: Swift.String?
+  @objc public var convenienceFeePercentage: Swift.String?
+  @objc public var countryCode: Swift.String?
+  @objc public var merchantName: Swift.String?
+  @objc public var cityName: Swift.String?
+  @objc public var postalCode: Swift.String?
+  @objc public var additionalDataField: Swift.String?
+  @objc public var additionalDataFieldTemplate: Swift.Dictionary<Swift.String, Any>?
+  @objc public var crc: Swift.String?
+  @objc public var merchantInformationLanguageTemplate: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag65: Swift.String?
+  @objc public var tag66: Swift.String?
+  @objc public var tag67: Swift.String?
+  @objc public var tag68: Swift.String?
+  @objc public var tag69: Swift.String?
+  @objc public var tag70: Swift.String?
+  @objc public var tag71: Swift.String?
+  @objc public var tag72: Swift.String?
+  @objc public var tag73: Swift.String?
+  @objc public var tag74: Swift.String?
+  @objc public var tag75: Swift.String?
+  @objc public var tag76: Swift.String?
+  @objc public var tag77: Swift.String?
+  @objc public var tag78: Swift.String?
+  @objc public var tag79: Swift.String?
+  @objc public var tag80: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag81: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag82: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag83: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag84: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag85: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag86: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag87: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag88: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag89: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag90: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag91: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag92: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag93: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag94: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag95: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag96: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag97: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag98: Swift.Dictionary<Swift.String, Any>?
+  @objc public var tag99: Swift.Dictionary<Swift.String, Any>?
+  @objc public var primaryID: Swift.String?
+  @objc public var secondaryID: Swift.String?
+  @objc public var billID: Swift.String?
+  @objc public var mobileNumber: Swift.String?
+  @objc public var storeID: Swift.String?
+  @objc public var loyaltyNumber: Swift.String?
+  @objc public var referenceID: Swift.String?
+  @objc public var consumerID: Swift.String?
+  @objc public var terminalID: Swift.String?
+  @objc public var purpose: Swift.String?
+  @objc public var additionalConsumerDataRequest: Swift.String?
+  @objc public var merchantTaxID: Swift.String?
+  @objc public var merchantChannel: Swift.String?
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, use variable additionalDataFieldTemplate for related tag as key")
+  @objc public var tagSixtyTwo10: Swift.String?
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, use variable additionalDataFieldTemplate for related tag as key")
+  @objc public var addDataMasterCard1: Swift.String?
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, use variable additionalDataFieldTemplate for related tag as key")
+  @objc public var addDataMasterCard2: Swift.String?
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, use variable additionalDataFieldTemplate for related tag as key")
+  @objc public var addDataNpci1: Swift.String?
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, use variable additionalDataFieldTemplate for related tag as key")
+  @objc public var addDataNpci2: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class QRCodeError : ObjectiveC.NSObject {
+  @objc public var errorCodes: [Swift.String]
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class QRError : ObjectiveC.NSObject {
+  @objc public var errorCode: Swift.String
+  @objc public var errorDescription: Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class QRCodeData : MVisaQRParser.MVISAMerchantTLV {
+  @objc final public var isPrimaryIDMandatory: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc final public var isSecondaryIDMandatory: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc final public var primaryIDLength: Swift.String?
+  @objc final public var secondaryIDLength: Swift.String?
+  @objc final public var isBillIDMandatory: Swift.Bool
+  @objc final public var isMobileNumberMandatory: Swift.Bool
+  @objc final public var isStoreIDMandatory: Swift.Bool
+  @objc final public var isLoyaltyNumberMandatory: Swift.Bool
+  @objc final public var isReferenceIDMandatory: Swift.Bool
+  @objc final public var isConsumerIDMandatory: Swift.Bool
+  @objc final public var isTerminalIDMandatory: Swift.Bool
+  @objc final public var isPurposeMandatory: Swift.Bool
+  @objc final public var isMerchantTaxIDMandatory: Swift.Bool
+  @objc final public var isMerchantChannelMandatory: Swift.Bool
+  @objc final public var isAdditonalConsumerDataRequestMandatory: Swift.Bool
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, this veriable is not part of tag 62 and it's subtag, hence removing it.")
+  @objc final public var isAddDataMasterCard1Mandatory: Swift.Bool
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, this veriable is not part of tag 62 and it's subtag, hence removing it.")
+  @objc final public var isAddDataMasterCard2Mandatory: Swift.Bool
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, this veriable is not part of tag 62 and it's subtag, hence removing it.")
+  @objc final public var isAddDataNpci1Mandatory: Swift.Bool
+  @available(*, deprecated, message: "This variable is deprecated in 3.1.0, this veriable is not part of tag 62 and it's subtag, hence removing it.")
+  @objc final public var isAddDataNpci2Mandatory: Swift.Bool
+  @objc final public var dictionaryOutput: [Swift.String : Swift.AnyObject] {
+    @objc get
+  }
+  @objc final public var jsonOutput: Swift.String {
+    @objc get
+  }
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class MVisaPayMerchantTLV : MVisaQRParser.MVISAMerchantTLV {
+  @objc override dynamic public init()
+  @objc deinit
+}

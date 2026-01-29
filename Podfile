@@ -1,9 +1,10 @@
-platform :ios, '11.0'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
-source 'https://cdn.cocoapods.org/'
-source 'https://gitlab.nbc.gov.kh/khqr/khqr-ios-pod.git'
-
-target 'QR Generation' do
+target 'QR ' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'BakongKHQR'
+
+  # Pods for QR 
+  #pod "Comets"
 end
